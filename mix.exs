@@ -20,7 +20,7 @@ defmodule Spreedly.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :httpoison]]
+    [applications: [:logger, :httpoison, :poison]]
   end
 
   # Dependencies can be Hex packages:
@@ -34,12 +34,12 @@ defmodule Spreedly.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:poison, "~> 4.0"},
+      {:poison, "~> 5.0"},
       {:httpoison, "~> 1.8"},
-      {:hackney, "~> 1.7 or ~> 1.8"},
-      {:ex_doc, ">= 0.0.0", only: :dev},
-      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
-      {:credo, "~> 0.9", only: [:dev, :test], runtime: false}
+      {:hackney, "~> 1.17"},
+      {:ex_doc, "~> 0.28", only: :dev},
+      {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 
