@@ -34,12 +34,12 @@ defmodule Spreedly.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 1.8"},
-      {:hackney, "~> 1.17"},
+      {:httpoison, "~> 1.8", override: true},
+      {:hackney, "~> 1.17", override: true},
       {:poison, "~> 5.0", override: true},
-      {:ex_doc, "~> 0.28", only: :dev},
-      {:dialyxir, "~> 1.1", only: [:dev], runtime: false},
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
+      {:ex_doc, "~> 0.28", only: :dev, override: true},
+      {:dialyxir, "~> 1.1", only: [:dev], runtime: false, override: true},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false, override: true}
     ]
   end
 
